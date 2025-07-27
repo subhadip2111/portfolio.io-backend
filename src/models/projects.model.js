@@ -29,7 +29,7 @@ const projectSchema = mongoose.Schema(
             default: [],
         },
 
-           features: {
+        features: {
             type: [String],
             default: [],
         },
@@ -52,7 +52,16 @@ const projectSchema = mongoose.Schema(
             type: mongoose.Schema.Types.ObjectId,
             ref: 'User'
         }
-
+        ,
+        repos: [
+            {
+                type: { type: String, default: '' },
+                url: { type: String, required: true },
+                repoName: { type: String, default: '' }
+            }
+           
+        ],
+ default:[]
     },
     {
         timestamps: true,
