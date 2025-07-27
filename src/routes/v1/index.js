@@ -6,6 +6,7 @@ const config = require('../../config/config');
 const leetcodeRoute=require('./leetcode.routes')
 const projectRoute=require('./project.routes')
 const webhooksRoute=require('./webhooks.routes')
+const githubStatsRoutes=require('./githubStats')
 const router = express.Router();
 
 const defaultRoutes = [
@@ -28,7 +29,12 @@ const defaultRoutes = [
   {
     path: '/webhooks',
     route: webhooksRoute,
+  },
+  {
+    path:'/githubstats',
+    route:githubStatsRoutes
   }
+
 ];
 
 const devRoutes = [
