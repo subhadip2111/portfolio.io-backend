@@ -8,7 +8,7 @@ const userSchema = mongoose.Schema(
   {
     fullName: {
       type: String,
-      default:'',
+      default: '',
       trim: true,
     },
     email: {
@@ -23,11 +23,51 @@ const userSchema = mongoose.Schema(
         }
       },
     },
+    profileImage: {
+      type: String,
+      default: '',
+    },
+    about: {
+      type: String,
+      default: '',
+    },
+
+    age: {
+      type: Number,
+      default: 0,
+    },
+
+
+ skills: {
+  type: [
+    {
+      name: { type: String, required: true },
+      level: { type: Number, required: true },
+      category: { type: String, required: true }
+    }
+  ],
+  default: []
+},
+    joined: {
+      type: String,
+      default: "July 18 2022"
+    }
+    ,
+    achivments: {
+      type: [
+        {
+          name: { type: String, required: true },
+          date: { type: String, default: Date.now().toString() },
+        }
+      ],
+      default: [],
+    },
+
     password: {
       type: String,
       required: true,
       trim: true,
-   
+
       private: true, // used by the toJSON plugin
     },
     role: {

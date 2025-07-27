@@ -59,9 +59,9 @@ const projectSchema = mongoose.Schema(
                 url: { type: String, required: true },
                 repoName: { type: String, default: '' }
             }
-           
+
         ],
- default:[]
+        default: []
     },
     {
         timestamps: true,

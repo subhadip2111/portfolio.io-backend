@@ -12,7 +12,6 @@ const githubAxios = axios.create({
   },
 });
 
-// GET /github/repo-data/:owner/:repo
 router.get('/repo-data', async (req, res) => {
   const { owner, repo } = req.query;
 
