@@ -5,6 +5,7 @@ const docsRoute = require('./docs.route');
 const config = require('../../config/config');
 const leetcodeRoute=require('./leetcode.routes')
 const projectRoute=require('./project.routes')
+const webhooksRoute=require('./webhooks.routes')
 const router = express.Router();
 
 const defaultRoutes = [
@@ -23,6 +24,10 @@ const defaultRoutes = [
    {
     path:'/project',
     route:projectRoute
+  },
+  {
+    path: '/webhooks',
+    route: webhooksRoute,
   }
 ];
 
